@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Osmanya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcGDrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBzG8SblEpSCiUUuQrkMhsCc+v7f3Ko4KjW/yLY0WXOez9mf4Ml3vSW1NYoAAAAAAAAAAAAAAAAAAAAAAAAAAADgYiriIsqU72FURcapGnXHk5aMue+xVCCT6n56x960Z2OpMt8jsozz+Xve0Xqc+h6SXbKzYOeSfex7UBap+J591lThHI3awPxw5KGcVFUj0RayaRrI6UaUj8GTpfA9NivknApkvTC2YdwjC9lc+h6dBWpFB7JFCIXx1FDIRr6HZ0Fq2EkZewjgXNMnLhVH34a+x/fPeMdYOK3/gchvTIFsXf/ZKR+bC+u/DcW1cS/d1f84jFobU+H3ANYXadNU2PU9PAvkd0Ngz/forMgMhU/1P5Xm4h0ZmHQCOAzz68WEPNdsg9iE+ZH4QATeBTApPYqf9PvoKIh99E2qOxQ3jVvf47JHDT5fMl5GAQW+3tNvnF/4N3shwrhJc8Ljw/Q0Q13MJ4GcRc8IORjP99vZfpWlQe2gH3EZx7Gs/4IJAADqQ3DJX/+FM38vqHyKlA5Hhx+Pj49X43468P34CheEiz9Z+pTMlrvFaQ6YbNrblRpKf6vNbHRNKX2yT/kwSVd5XluzGGs//Ew9NfIGS/RYs3X2yUGzp7dpnMYu+zPql1mbp46f+XxeSCkVxrpt8+bmWJgJOTPeYP7m5QkWi4Wye0d94t3m3sNmtFao5OyLvle7zPnRaKlQCb6+IDBfXvddJ1oq5BH5WE7JXd/xwWilUKnJpYGM9a7dPk5mpfCWP18cmO+okdOtaKVwYHxm5ZP1wOWNPBuFneUfBTK2dHkzyEbhwfirco3NxOF+aqPw8rPMbzuHV34bhX+h4e6q6KnQ4ZM6ngrZyNlG9FXo7hfMvgp7zt7o8FXIDq52U2+FznbTKgovmgAsalq4mB0mQqjJYfvler98o6sWhevuYPh2C5jz4WD1ReMPR4soi4W91dmtXy7MK469o7mpvcLn8nRaSWPi9PzH/++FCXvW3LuXpoXxi6MllK1tqHtGLBMd0zccLYNtFR60W8T0wkqv7yTQVuGTfpfLuvRXkms3sxo7hQlx/yy7NayOO3Uq3MXExY148PFY6OZyYafwihqsXNJfGteoMCGXQoYfzxo1KmxSO2kkJvTLcXUq3BreraFnp3UqNLwT3aJPpnUqPNBjTV+CKDScFVv0t+pUaLiytegXq1BoCQoLKNRDYfVQWEChHgqrh8ICCvVQWD0UFlCoh8LqobCAQj0UVg+FBRTqobB6KCygUA+F1UNhAYV6KKweCgso1ENh9VBYQKEeCquHwkKAhe1SIf2UoaFwSP+/dB29FtTvUsbnH+Q3VxTDmxOq+zffskqJiOtFpZda+OV/M6uQKepLof0NWAAAAAAAAAAAAAAAAAAAAAAAAAAAgAr8Aj5RWY0PDbn2AAAAAElFTkSuQmCC" type="image/x-icon">
+    
+    <title>Linkedin Chat</title>
+</head>
+<body style="margin: 0px; padding: 0px; background-color: lightsteelblue;">
+  
+    <nav id="NavBar">
+        <div style="display: flex; align-items: center;">
+            <img style="width: 50px; height: 50px; margin-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcGDrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBzG8SblEpSCiUUuQrkMhsCc+v7f3Ko4KjW/yLY0WXOez9mf4Ml3vSW1NYoAAAAAAAAAAAAAAAAAAAAAAAAAAADgYiriIsqU72FURcapGnXHk5aMue+xVCCT6n56x960Z2OpMt8jsozz+Xve0Xqc+h6SXbKzYOeSfex7UBap+J591lThHI3awPxw5KGcVFUj0RayaRrI6UaUj8GTpfA9NivknApkvTC2YdwjC9lc+h6dBWpFB7JFCIXx1FDIRr6HZ0Fq2EkZewjgXNMnLhVH34a+x/fPeMdYOK3/gchvTIFsXf/ZKR+bC+u/DcW1cS/d1f84jFobU+H3ANYXadNU2PU9PAvkd0Ngz/forMgMhU/1P5Xm4h0ZmHQCOAzz68WEPNdsg9iE+ZH4QATeBTApPYqf9PvoKIh99E2qOxQ3jVvf47JHDT5fMl5GAQW+3tNvnF/4N3shwrhJc8Ljw/Q0Q13MJ4GcRc8IORjP99vZfpWlQe2gH3EZx7Gs/4IJAADqQ3DJX/+FM38vqHyKlA5Hhx+Pj49X43468P34CheEiz9Z+pTMlrvFaQ6YbNrblRpKf6vNbHRNKX2yT/kwSVd5XluzGGs//Ew9NfIGS/RYs3X2yUGzp7dpnMYu+zPql1mbp46f+XxeSCkVxrpt8+bmWJgJOTPeYP7m5QkWi4Wye0d94t3m3sNmtFao5OyLvle7zPnRaKlQCb6+IDBfXvddJ1oq5BH5WE7JXd/xwWilUKnJpYGM9a7dPk5mpfCWP18cmO+okdOtaKVwYHxm5ZP1wOWNPBuFneUfBTK2dHkzyEbhwfirco3NxOF+aqPw8rPMbzuHV34bhX+h4e6q6KnQ4ZM6ngrZyNlG9FXo7hfMvgp7zt7o8FXIDq52U2+FznbTKgovmgAsalq4mB0mQqjJYfvler98o6sWhevuYPh2C5jz4WD1ReMPR4soi4W91dmtXy7MK469o7mpvcLn8nRaSWPi9PzH/++FCXvW3LuXpoXxi6MllK1tqHtGLBMd0zccLYNtFR60W8T0wkqv7yTQVuGTfpfLuvRXkms3sxo7hQlx/yy7NayOO3Uq3MXExY148PFY6OZyYafwihqsXNJfGteoMCGXQoYfzxo1KmxSO2kkJvTLcXUq3BreraFnp3UqNLwT3aJPpnUqPNBjTV+CKDScFVv0t+pUaLiytegXq1BoCQoLKNRDYfVQWEChHgqrh8ICCvVQWD0UFlCoh8LqobCAQj0UVg+FBRTqobB6KCygUA+F1UNhAYV6KKweCgso1ENh9VBYQKEeCquHwkKAhe1SIf2UoaFwSP+/dB29FtTvUsbnH+Q3VxTDmxOq+zffskqJiOtFpZda+OV/M6uQKepLof0NWAAAAAAAAAAAAAAAAAAAAAAAAAAAgAr8Aj5RWY0PDbn2AAAAAElFTkSuQmCC" alt="">
+            <input type="text" id="fname" name="fname" placeholder="Search">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; width: 300px;">
+        <div id="ContainerIcon1">
+            <i style="color: gray;" class="bi bi-house-door-fill"></i>
+            <i style="color: gray;" class="bi bi-people-fill"></i>
+            <i style="color: gray;" class="bi bi-duffle-fill"></i>
+            <i style="color: gray;" class="bi bi-chat-right-dots-fill"></i>
+            <i style="color: gray;" class="bi bi-bell-fill"></i>
+            <i style="color: rgb(14, 120, 206);" class="bi bi-person-circle"></i>  
+        </div>
+
+        <div id="ContainerIcon2">
+            <i style="color: gray;" class="bi bi-border"></i>
+            <i style="color: gray;" class="bi bi-compass"></i>
+
+        </div>
+
+    </div>
+
+    </nav>
+    
+    
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div id="PannelloChat">
+            
+            <div id="sezioneContatti">
+                <div style="border-bottom: 2px solid lightgray;height: 50px; display: flex; align-items: center; justify-content: space-around; padding-left: 10px;">
+                    <h3 style="font-size: 16px;">Messaging</h3>
+                    <button id="bottoneChat">New Chat</button>
+                </div>
+                <div style="overflow-y: scroll; height: 80vh;">
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://prod-media.beinsports.com/image/1685272965601_fc83bf66-216c-4dc4-a3fc-1a226c16249f.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">David Beckham</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://e0.365dm.com/17/12/2048x1152/skysports-cristiano-ronaldo-real-madrid-football_4178227.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Cristiano</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://cdn.corrieredellosport.it/img/990/495/2023/10/16/080230424-851da211-7274-4beb-a4ac-f27f2851964b.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Paulo Dybala</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://cdn.vox-cdn.com/thumbor/mlWqtqxSTJ4KuqOB65JvA6u5sTQ=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24729976/1498680017.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Jude Bellingham</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://static.sky.it/editorialimages/17567396e824129508344c3f93ca37193235fc0a/skysport/it/calcio/calciomercato/messi-barcellona-storia/messi_copertina_carriera.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Lionel Messi</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt59ffc9b40e56df4f/6437a41112a899164f8bdf03/delpiero.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Del Piero</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://cdn.artphotolimited.com/images/5c77db4dea7f855052aeb269/1000x1000/zinedine-zidane.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Zinedine Zidane</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="border-top: solid 1px lightgray;">
+                        
+                        <div style="display: flex; align-items: center; padding: 20px;">
+                            
+                            <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://staticfanpage.akamaized.net/wp-content/uploads/sites/27/2023/03/Ozil-Arsenal-1679485908118.jpg" alt="">
+                            
+                            <div style="padding-left: 5px; height: 50px;">
+                                <h5 style="font-size: 12px; position: relative; bottom: 15px;">Mesut Ozil</h5>
+                                <p style="font-size: 10px;position: relative; bottom: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </div> 
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="sezioneChat">
+                
+                <div style="border-bottom: 2px solid lightgray; height: 50px; display: flex; align-items: center; padding-left: 20px;">
+                    <img style="width: 45px; height: 45px; border-radius: 100px; object-fit: cover;" src="https://prod-media.beinsports.com/image/1685272965601_fc83bf66-216c-4dc4-a3fc-1a226c16249f.jpg" alt="">
+                    <h4 style="position: relative; left: 10px;">David Beckham</h4> 
+                </div>
+                
+                <div id="Chat">
+                    
+                    <div class="MessaggioChat2">
+                        <p class="Mex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat1">
+                        <p class="Mex1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat2">
+                        <p class="Mex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat1">
+                        <p class="Mex1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat2">
+                        <p class="Mex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat1">
+                        <p class="Mex1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    
+                    <div class="MessaggioChat2">
+                        <p class="Mex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    <div class="MessaggioChat1">
+                        <p class="Mex1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus hic a quod impedit illum debitis aliquam magni, repellendus aperiam et.</p>
+                    </div>
+                    
+                    
+                </div>
+                
+                <textarea id="BoxInserimento" placeholder=" Write a message..." rows="6"></textarea>
+                
+                <div style="display: flex; width: 100%; height: 60px;">
+                    
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
